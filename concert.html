@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chase Atlantic Virtual Concert</title>
+    <link rel="stylesheet" href="concert-style.css">
+</head>
+<body>
+    <div class="concert-page">
+        <div class="concert-header">
+            <h1>Welcome to the Chase Atlantic Concert</h1>
+            <p>You’re at the front row. Let’s rock!</p>
+        </div>
+
+        <!-- Stage 1 (Main Stage) -->
+        <section class="stage" id="main-stage">
+            <h2>Main Stage</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXX" title="Chase Atlantic Live 1" frameborder="0" allowfullscreen></iframe>
+            <button class="next-button" onclick="nextStage('acoustic-stage')">Go to Acoustic Stage</button>
+        </section>
+
+        <!-- Stage 2 (Acoustic Stage) -->
+        <section class="stage hidden" id="acoustic-stage">
+            <h2>Acoustic Stage</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXX" title="Chase Atlantic Acoustic" frameborder="0" allowfullscreen></iframe>
+            <button class="next-button" onclick="nextStage('closing-stage')">Go to Final Stage</button>
+        </section>
+
+        <!-- Stage 3 (Final Stage) -->
+        <section class="stage hidden" id="closing-stage">
+            <h2>Encore Stage</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXX" title="Chase Atlantic Encore" frameborder="0" allowfullscreen></iframe>
+            <p>Thank you for joining the concert!</p>
+            <button class="next-button" onclick="showMessage()">End Concert</button>
+        </section>
+
+        <!-- Final Message -->
+        <section class="hidden" id="final-message">
+            <h2>Personal Message</h2>
+            <p>I hope you loved the show as much as I loved putting this together for you. Here’s to many more concerts together!</p>
+            <p>Love, [Your Name]</p>
+        </section>
+    </div>
+
+    <script>
+        function nextStage(stageId) {
+            // Hide all stages
+            var stages = document.querySelectorAll('.stage');
+            stages.forEach(stage => stage.classList.add('hidden'));
+
+            // Show the next stage
+            document.getElementById(stageId).classList.remove('hidden');
+        }
+
+        function showMessage() {
+            document.getElementById('final-message').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
