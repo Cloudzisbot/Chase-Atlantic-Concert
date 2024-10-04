@@ -4,68 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chase Atlantic Virtual Concert</title>
+    <title>Chase Atlantic Virtual Concert - VIP Ticket</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Your Private Chase Atlantic Virtual Concert</h1>
-        <p>A special show curated just for you!</p>
-    </header>
-
-    <!-- Digital Ticket Section -->
-    <section id="ticket">
-        <h2>Your VIP Concert Ticket</h2>
-        <div class="ticket-container">
+    <div class="ticket-page">
+        <h1>Your Exclusive VIP Ticket</h1>
+        <p>Get ready for a private Chase Atlantic virtual concert experience!</p>
+        
+        <div class="ticket" onclick="enterConcert()">
             <div class="ticket-details">
-                <p><strong>Event:</strong> Chase Atlantic Virtual Concert</p>
-                <p><strong>Date:</strong> Available Anytime</p>
-                <p><strong>Venue:</strong> Your Personal Stage</p>
-                <p><strong>Seat:</strong> VIP Front Row</p>
+                <h2>Chase Atlantic Virtual Concert</h2>
+                <p>Date: Available Anytime</p>
+                <p>Venue: Your Personal Stage</p>
+                <p>Seat: VIP Front Row</p>
             </div>
-            <div class="qr-code">
-                <!-- You can add a QR code image that links to the same page or simply leave it as text -->
-                <img src="https://via.placeholder.com/150" alt="QR Code">
-                <p>Scan for VIP access!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Virtual Concert Experience Section -->
-    <section id="concert">
-        <h2>Virtual Concert Experience</h2>
-        <p>Here are some of your favorite Chase Atlantic performances! Enjoy the show.</p>
-
-        <div class="video-grid">
-            <!-- Video 1 -->
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXX" title="Chase Atlantic Live Performance 1" frameborder="0" allowfullscreen></iframe>
-                <p>Live Performance 1</p>
-            </div>
-
-            <!-- Video 2 -->
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXX" title="Chase Atlantic Live Performance 2" frameborder="0" allowfullscreen></iframe>
-                <p>Live Performance 2</p>
-            </div>
-
-            <!-- Video 3 -->
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXX" title="Chase Atlantic Acoustic Session" frameborder="0" allowfullscreen></iframe>
-                <p>Acoustic Session</p>
+            <div class="ticket-design">
+                <!-- Optional: Add a QR code or a cool design here -->
+                <img src="https://via.placeholder.com/100x100" alt="QR Code">
             </div>
         </div>
-    </section>
 
-    <!-- Personal Message Section -->
-    <section id="message">
-        <h2>A Special Message Just for You</h2>
-        <p>Thank you for being my favorite person to share Chase Atlantic with. I hope this virtual concert brings a smile to your face as much as their music brings joy to ours. Here's to many more concerts together!</p>
-        <p>Love, [Your Name]</p>
-    </section>
+        <p class="click-message">Click the ticket to enter the concert!</p>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Created with Love for [Her Name].</p>
-    </footer>
+    <script>
+        function enterConcert() {
+            window.location.href = "concert.html";  <!-- Redirect to the concert page -->
+        }
+    </script>
 </body>
 </html>
